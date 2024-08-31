@@ -24,7 +24,9 @@ depositar(valor){
     }
     //Criando método de transferência:
     transferir(valor, conta){
-        const valorsacado = this.sacar(valor)
+        if(valor >= 1){
+            const valorsacado = this.sacar(valor)
         conta.depositar(valorsacado)
+        }
     }
 }

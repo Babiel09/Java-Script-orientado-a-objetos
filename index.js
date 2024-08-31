@@ -11,6 +11,7 @@ const cliente1 = new Cliente()
 
 cliente1.nome = "Ricardo"
 cliente1.cpf = 11122233309
+cliente1.cidade = 'BH'
 
 //Add ao cliente1 a conta corrente:
 
@@ -23,6 +24,7 @@ cliente1conta.depositar(6000)
 const cliente2 = new Cliente()
 cliente2.nome = "Alice";
 cliente2.cpf = 88822233309;
+cliente2.cidade = 'Roraima'
 
 //Fazendo a mesma coisa com o cliente2:
 
@@ -35,11 +37,12 @@ cliente2conta.cliente = 'Alice'
 
 //Trasnferindo money $:
 
-cliente1conta.transferir(400, cliente2conta)
+cliente1conta.transferir(124, cliente2conta)
 
 
 //const valorsacado = cliente1conta.sacar(200)
 
 
 //Testando pra ver se tudo deu certo:
-console.log(cliente1conta, cliente2conta)
+console.log(cliente1conta)
+console.log(cliente2conta)
