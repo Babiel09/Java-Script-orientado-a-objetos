@@ -1,35 +1,8 @@
-class Cliente{
-    
-    nome 
-    cpf
-    
-}
+//Importando os clientes e a contacorrente!:
 
-//Criando a conta corrente:
+import {Cliente} from './cliente.js'
 
-class ContaCorrente{
-
-    agencia
-    _saldo = 1000
-
-
-//Criando metodos:
-
-sacar(valor){
-    if(this._saldo >= valor){
-        this._saldo -= valor
-        return 'Você sacou: ',valor
-        }
-    }  
-
-depositar(valor){
-    if(valor >= 0){
-        this._saldo += valor
-        } else if(valor <= 0){
-            return
-        }
-    }
-}
+import {ContaCorrente} from './Conta.js'
 
 
 
@@ -46,7 +19,6 @@ cliente1conta.agencia = 1001;
 cliente1conta._saldo = 1000
 
 const cliente2 = new Cliente()
-
 cliente2.nome = "Alice";
 cliente2.cpf = 88822233309;
 
