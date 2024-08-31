@@ -3,10 +3,16 @@
 
 
 export class ContaCorrente{
+    //Criando atributo estático
+    static numeroDeContas = 0
     constructor(cliente, agencia, saldo){
         this._cliente = cliente
         this.agencia = agencia
         this._saldo = saldo = 0
+        //Sempre que eu chamar o construtor, a minha conta corrente
+        //vai avisar ao numero de contas que tem mais uma conta
+        ContaCorrente.numeroDeContas += 1
+        
 }
     
     set cliente(novoValor){

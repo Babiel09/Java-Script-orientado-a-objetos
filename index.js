@@ -26,10 +26,10 @@ const cliente2conta = new ContaCorrente(cliente2, 1001,  0)
 
 cliente1conta.transferir(1, cliente2conta)
 
-
 //const valorsacado = cliente1conta.sacar(200)
 
 
 //Testando pra ver se tudo deu certo:
 console.log(cliente1conta)
 console.log(cliente2conta)
+console.log(ContaCorrente.numeroDeContas)
