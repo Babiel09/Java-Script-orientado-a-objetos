@@ -7,37 +7,35 @@ import {ContaCorrente} from './Conta.js'
 
 
 
-const cliente1 = new Cliente()
-
-cliente1.nome = "Ricardo"
-cliente1.cpf = 11122233309
-cliente1.cidade = 'BH'
-
 //Add ao cliente1 a conta corrente:
 
 const cliente1conta = new ContaCorrente()
 cliente1conta.agencia = 1001;
 cliente1conta._saldo = 0
-cliente1conta.cliente = 'Ricardo'
+cliente1conta.cliente = new Cliente()
+cliente1conta.nome = "Ricardo"
+cliente1conta.cpf = 11122233309
+cliente1conta.cidade = 'BH'
 cliente1conta.depositar(6000)
 
-const cliente2 = new Cliente()
-cliente2.nome = "Alice";
-cliente2.cpf = 88822233309;
-cliente2.cidade = 'Roraima'
 
 //Fazendo a mesma coisa com o cliente2:
-
+        //objeto:
 const cliente2conta = new ContaCorrente()
 
+
+//Referência ao objeto:
 cliente2conta.agencia = 1001;
 cliente2conta._saldo = 1000
-cliente2conta.cliente = 'Alice'
+cliente2conta.cliente = new Cliente()
+cliente2conta.nome = "Alice";
+cliente2conta.cpf = 88822233309;
+cliente2conta.cidade = 'Roraima'
 
 
 //Trasnferindo money $:
 
-cliente1conta.transferir(124, cliente2conta)
+cliente1conta.transferir(900, cliente2conta)
 
 
 //const valorsacado = cliente1conta.sacar(200)
@@ -45,4 +43,3 @@ cliente1conta.transferir(124, cliente2conta)
 
 //Testando pra ver se tudo deu certo:
 console.log(cliente1conta)
-console.log(cliente2conta)

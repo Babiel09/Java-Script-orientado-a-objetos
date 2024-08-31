@@ -27,6 +27,9 @@ depositar(valor){
         if(valor >= 1){
             const valorsacado = this.sacar(valor)
         conta.depositar(valorsacado)
+        }else if( transferir.valor > this._saldo){
+            console.log('Você não pode transferir um valor que você não tem')
         }
     }
 }
+
