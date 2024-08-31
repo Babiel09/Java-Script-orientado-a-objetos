@@ -10,22 +10,23 @@ class Cliente{
 class ContaCorrente{
 
     agencia
-    #saldo
+    _saldo = 1000
 
 
 //Criando metodos:
 
-saque(valor){
-    if(this.#saldo >= valor){
-        this.#saldo -= valor
+sacar(valor){
+    if(this._saldo >= valor){
+        this._saldo -= valor
+        return 'Você sacou: ',valor
         }
     }  
 
-    depositar(valor){
+depositar(valor){
     if(valor >= 0){
-        this.#saldo += valor
-    }else if(valor < 0){
-        console.log('Já era fi "try again".')
+        this._saldo += valor
+        } else if(valor <= 0){
+            return
         }
     }
 }
@@ -35,14 +36,14 @@ saque(valor){
 
 const cliente1 = new Cliente()
 
-cliente1.nome = "Ricardo";
-cliente1.cpf = 11122233309;
+cliente1.nome = "Ricardo"
+cliente1.cpf = 11122233309
 
 //Add ao cliente1 a conta corrente:
 
 const cliente1conta = new ContaCorrente()
 cliente1conta.agencia = 1001;
-cliente1conta.saldo = 1000;
+cliente1conta._saldo = 1000
 
 const cliente2 = new Cliente()
 
@@ -54,16 +55,14 @@ cliente2.cpf = 88822233309;
 const cliente2conta = new ContaCorrente()
 
 cliente2conta.agencia = 1001;
-cliente2conta.saldo = 1000;
-
-cliente1conta.depositar(400)
-cliente2conta.depositar(4000)
+cliente2conta._saldo = 1000
 
 
 
 
+const valorsacado = cliente1conta.sacar(50)
 
 
-
-console.log(cliente1conta.saldo)
-console.log(cliente2conta.saldo)
+//Testando pra ver se tudo deu certo:
+console.log(valorsacado)
+console.log(cliente1conta)
