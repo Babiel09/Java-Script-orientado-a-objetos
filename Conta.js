@@ -1,7 +1,13 @@
 //Criando a conta corrente:
 
 export class ContaCorrente{
-    cliente
+    _cliente
+    set cliente(novoValor){
+        if(novoValor = this._cliente){
+        this._cliente = novoValor
+        }
+    }
+
     agencia
     _saldo = 1000
 
