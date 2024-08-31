@@ -4,11 +4,8 @@
   "description": "Projeto Alura",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Babiel09/Java-Script-orientado-a-objetos"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "Gabriel Castro",
   "license": "ISC",

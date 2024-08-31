@@ -1,7 +1,7 @@
 //Criando a conta corrente:
 
 export class ContaCorrente{
-
+    cliente
     agencia
     _saldo = 1000
 
@@ -21,5 +21,10 @@ depositar(valor){
         } else if(valor <= 0){
             return
         }
+    }
+    //Criando método de transferência:
+    transferir(valor, conta){
+        const valorsacado = this.sacar(valor)
+        conta.depositar(valorsacado)
     }
 }

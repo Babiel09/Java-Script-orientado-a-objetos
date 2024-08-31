@@ -16,7 +16,9 @@ cliente1.cpf = 11122233309
 
 const cliente1conta = new ContaCorrente()
 cliente1conta.agencia = 1001;
-cliente1conta._saldo = 1000
+cliente1conta._saldo = 0
+cliente1conta.cliente = 'Ricardo'
+cliente1conta.depositar(6000)
 
 const cliente2 = new Cliente()
 cliente2.nome = "Alice";
@@ -28,13 +30,16 @@ const cliente2conta = new ContaCorrente()
 
 cliente2conta.agencia = 1001;
 cliente2conta._saldo = 1000
+cliente2conta.cliente = 'Alice'
 
 
+//Trasnferindo money $:
+
+cliente1conta.transferir(400, cliente2conta)
 
 
-const valorsacado = cliente1conta.sacar(50)
+//const valorsacado = cliente1conta.sacar(200)
 
 
 //Testando pra ver se tudo deu certo:
-console.log(valorsacado)
-console.log(cliente1conta)
+console.log(cliente1conta, cliente2conta)
