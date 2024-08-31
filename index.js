@@ -1,25 +1,33 @@
 class Cliente{
-    constructor(nome, cpf){
-    this.nome = nome,
-    this.cpf = cpf
-    }
+    
+    nome 
+    cpf
+    
 }
 
 //Criando a conta corrente:
 
 class ContaCorrente{
-    constructor(agencia, saldo){
-    this.agencia = agencia;
-    this.saldo = saldo;
-    }
+
+    agencia
+    #saldo
+
 
 //Criando metodos:
 
 saque(valor){
-    if(this.saldo >= valor){
-        this.saldo -= valor
+    if(this.#saldo >= valor){
+        this.#saldo -= valor
         }
     }  
+
+    depositar(valor){
+    if(valor >= 0){
+        this.#saldo += valor
+    }else if(valor < 0){
+        console.log('Já era fi "try again".')
+        }
+    }
 }
 
 
@@ -48,8 +56,8 @@ const cliente2conta = new ContaCorrente()
 cliente2conta.agencia = 1001;
 cliente2conta.saldo = 1000;
 
-cliente1conta.saque(400)
-cliente2conta.saque(4000)
+cliente1conta.depositar(400)
+cliente2conta.depositar(4000)
 
 
 
