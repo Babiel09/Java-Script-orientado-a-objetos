@@ -10,7 +10,8 @@ const cliente1 = new Cliente("Ricardo", 12345233309, 'Belo-Horizonte');
 
 //Add ao cliente1 a conta corrente:
 
-const cliente1conta = new ContaCorrente(cliente1, 1001, 900000000000000)
+const cliente1conta = new ContaCorrente(cliente1, 1001, 0)
+cliente1conta.depositar(25800000)
 
 const cliente2 = new Cliente("Alice",8822233309,'Xique-Xique');
 
@@ -23,7 +24,7 @@ const cliente2conta = new ContaCorrente(cliente2, 1001,  0)
 
 //Trasnferindo money $:
 
-cliente1conta.transferir(9000, cliente2conta)
+cliente1conta.transferir(1, cliente2conta)
 
 
 //const valorsacado = cliente1conta.sacar(200)
