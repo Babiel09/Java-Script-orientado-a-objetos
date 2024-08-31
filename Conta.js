@@ -1,5 +1,7 @@
 //Criando a conta corrente:
 
+
+
 export class ContaCorrente{
     _cliente
     set cliente(novoValor){
@@ -8,8 +10,19 @@ export class ContaCorrente{
         }
     }
 
+    //Criando acessor para acessar explicitamente o valor do '_cliente'
+    get cliente(){
+        return this._cliente
+    }
+
     agencia
+
     _saldo = 1000
+    //Criando um acessor para poder pegar de maneira separada o saldo de um determinado cliente
+    //Que foi definido dentro do index.js
+    get saldo(){
+        return this._saldo
+    }
 
 
 //Criando metodos:

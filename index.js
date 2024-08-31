@@ -50,5 +50,5 @@ cliente1conta.transferir(9000, cliente2conta)
 
 
 //Testando pra ver se tudo deu certo:
-console.log(cliente1conta)
+console.log(cliente1conta._saldo)
 console.log(cliente2conta)
