@@ -3,7 +3,12 @@
 
 
 export class ContaCorrente{
-    _cliente
+    constructor(cliente, agencia, saldo){
+        this._cliente = cliente
+        this.agencia = agencia
+        this._saldo = saldo = 0
+}
+    
     set cliente(novoValor){
         if(novoValor = this._cliente){
         this._cliente = novoValor
@@ -15,9 +20,8 @@ export class ContaCorrente{
         return this._cliente
     }
 
-    agencia
+    
 
-    _saldo = 1000
     //Criando um acessor para poder pegar de maneira separada o saldo de um determinado cliente
     //Que foi definido dentro do index.js
     get saldo(){

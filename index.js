@@ -6,39 +6,19 @@ import {ContaCorrente} from './Conta.js'
 
 
 
-const cliente1 = new Cliente();
-
-cliente1.nome = "Ricardo";
-cliente1.cpf = 12345233309;
-cliente1.cidade = 'Belo-Horizonte'
-
-
+const cliente1 = new Cliente("Ricardo", 12345233309, 'Belo-Horizonte');
 
 //Add ao cliente1 a conta corrente:
 
-const cliente1conta = new ContaCorrente()
-cliente1conta.agencia = 1001;
-cliente1conta._saldo = 900000000000000
-cliente1conta._cliente = cliente1
+const cliente1conta = new ContaCorrente(cliente1, 1001, 900000000000000)
 
+const cliente2 = new Cliente("Alice",8822233309,'Xique-Xique');
 
-const cliente2 = new Cliente();
-
-cliente2.nome = "Alice";
-cliente2.cpf = 88822233309;
-cliente2.cidade = 'Xique-Xique'
 
 
 //Fazendo a mesma coisa com o cliente2:
         //objeto:
-const cliente2conta = new ContaCorrente()
-
-
-//Referência ao objeto:
-cliente2conta.agencia = 1001;
-cliente2conta._saldo = 0
-cliente2conta._cliente = cliente2
-
+const cliente2conta = new ContaCorrente(cliente2, 1001,  0)
 
 
 //Trasnferindo money $:
@@ -50,5 +30,5 @@ cliente1conta.transferir(9000, cliente2conta)
 
 
 //Testando pra ver se tudo deu certo:
-console.log(cliente1conta._saldo)
+console.log(cliente1conta)
 console.log(cliente2conta)
